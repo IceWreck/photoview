@@ -102,8 +102,21 @@ export interface shareAlbumQuery_album_media_videoWeb {
   url: string;
 }
 
+export interface shareAlbumQuery_album_media_exif_coordinates {
+  __typename: "Coordinates";
+  /**
+   * GPS latitude in degrees
+   */
+  latitude: number;
+  /**
+   * GPS longitude in degrees
+   */
+  longitude: number;
+}
+
 export interface shareAlbumQuery_album_media_exif {
   __typename: "MediaEXIF";
+  id: string;
   /**
    * The model name of the camera
    */
@@ -141,6 +154,10 @@ export interface shareAlbumQuery_album_media_exif {
    * An index describing the mode for adjusting the exposure of the image
    */
   exposureProgram: number | null;
+  /**
+   * GPS coordinates of where the image was taken
+   */
+  coordinates: shareAlbumQuery_album_media_exif_coordinates | null;
 }
 
 export interface shareAlbumQuery_album_media {

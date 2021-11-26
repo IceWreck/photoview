@@ -11,6 +11,7 @@ const AuthorizedRoute = React.lazy(() => import('./AuthorizedRoute'))
 const AlbumsPage = React.lazy(
   () => import('../../Pages/AllAlbumsPage/AlbumsPage')
 )
+const SearchPage = React.lazy(() => import('../../Pages/SearchPage/SearchPage'))
 const AlbumPage = React.lazy(() => import('../../Pages/AlbumPage/AlbumPage'))
 const TimelinePage = React.lazy(
   () => import('../../Pages/TimelinePage/TimelinePage')
@@ -51,6 +52,7 @@ const Routes = () => {
         <Route path="/share" component={SharePage} />
         <AuthorizedRoute exact path="/albums" component={AlbumsPage} />
         <AuthorizedRoute path="/album/:id" component={AlbumPage} />
+        <AuthorizedRoute path="/search" component={SearchPage} />
         <AuthorizedRoute path="/timeline" component={TimelinePage} />
         <AuthorizedRoute path="/places" component={PlacesPage} />
         <AuthorizedRoute path="/people/:person?" component={PeoplePage} />
