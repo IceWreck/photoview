@@ -13,6 +13,8 @@ import { TFunction, useTranslation } from 'react-i18next'
 import Loader from '../../primitives/Loader'
 import AuthorizedRoute from './AuthorizedRoute'
 
+const SearchPage = React.lazy(() => import('../../Pages/SearchPage/SearchPage'))
+
 const AlbumsPage = React.lazy(
   () => import('../../Pages/AllAlbumsPage/AlbumsPage')
 )
@@ -85,6 +87,10 @@ const Routes = () => {
     {
       path: '/album/:id',
       element: authorized(<AlbumPage />),
+    },
+    {
+      path: '/search',
+      element: authorized(<SearchPage />),
     },
     {
       path: '/timeline',

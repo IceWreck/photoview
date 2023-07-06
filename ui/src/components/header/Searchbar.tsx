@@ -342,7 +342,7 @@ const PhotoRow = ({ query, media, selected, setSelected }: PhotoRowArgs) => (
   <SearchRow
     key={media.id}
     id={media.id}
-    link={`/album/${media.album.id}`}
+    link={`/search?keywords=${encodeURIComponent(query)}`}
     preview={
       <ProtectedImage
         src={media?.thumbnail?.url}
@@ -366,7 +366,7 @@ const AlbumRow = ({ query, album, selected, setSelected }: AlbumRowArgs) => (
   <SearchRow
     key={album.id}
     id={album.id}
-    link={`/album/${album.id}`}
+    link={`/search?keywords=${encodeURIComponent(query)}`}
     preview={
       <ProtectedImage
         src={album?.thumbnail?.thumbnail?.url}

@@ -8,6 +8,8 @@
 
 ![screenshot](./screenshots/timeline.png)
 
+**Photoview fork with a proper search results page where you can view and scroll search results.**
+
 Photoview is a simple and user-friendly photo gallery that's made for photographers and aims to provide an easy and fast way to navigate directories, with thousands of high-resolution photos.
 
 You configure Photoview to look for photos and videos within a directory on your file system. The scanner automatically picks up your media and start to generate thumbnail images to make browsing super fast.
